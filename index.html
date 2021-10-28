@@ -1,0 +1,29 @@
+
+<html>
+<body>
+	<meta charset="utf-8">
+	10360874
+    <!--<input type="button" value=" <- back" onclick="location.href='index.html'" style="width:150px;height:50px;font-size:20px;"> --> 
+    <div style="text-align:center;"><h1>DNS</h1></div>
+    <div style="padding-left:60px;"><h3>作用</h3></div>
+   	<div style="padding-left:90px;"><h4>將ip轉為網址</h4></div>
+    <div style="padding-left:60px;"><h3>DNS 運作順序</h3></div>
+    <pre><div style="padding-left:30px;">
+   	1. 客戶端向伺服器提出查詢項目 
+	2. 當被詢問到有關本域名之內的主機名稱的時候，DNS伺服器會直接做出回答 
+	3. 如果所查詢的主機名稱屬於其它域名的話，會檢查快取記憶體(Cache)，看看有沒有相關資料 
+	4. 如果沒有發現，則會轉向root伺服器查詢﹔ 
+	5. 然後root伺服器會將該域名之下一層伺服器的位址告知(可能會超過一台) 
+	6. 本地伺服器然後會向其中的一台伺服器查詢，並將這些伺服器名單存到記憶體中，以備將來之需(省去再向root查詢的步驟) 
+	7. 遠方伺服器回應查詢 
+	8. 若該回應並非最後一層的答案，則繼續往下一層查詢，直到獲得客戶端所查詢的結果為止 
+	9. 將查詢結果回應給客戶端，並同時將結果儲存一個備份在自己的快取記憶裡面 
+	10. 如果在存放時間尚未過時之前再接到相同的查詢，則以存放於快取記憶裡面的資料來做回應
+	</pre>
+
+	<div style="padding-left:120px;"><img src="dns.png" width="500" height="300">
+</body>
+</html>
+
+
+
