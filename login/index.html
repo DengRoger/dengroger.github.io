@@ -134,7 +134,7 @@
 
             //會員登入------------------
             var attempt = 3; // 可變數來計算嘗試次數。
-            function myFormCheck(){// 以下功能單擊登錄按鈕執行。
+            function myFormCheck(){
                 var username = document.getElementById("username").value;
                 var password = document.getElementById("password").value;
                 if ( username === "Formget" && password === "formget#123"){
@@ -154,18 +154,7 @@
                     }
                 }
             }
-            //第種寫法// 記住我 passport remember-me  (NodeJS Express Passport Remember me)
-            // app.use( function (req, res, next) {
-            //     if ( req.method === 'POST' && req.url === '/login' ) {
-            //         if ( req.body.rememberme ) {
-            //             req.session.cookie.maxAge = 2592000000; // 30*24*60*60*1000 Rememeber 'me' for 30 days
-            //         } else {
-            //             req.session.cookie.expires = false;
-            //         }
-            //     }
-            //     next();
-            // });
-            //第二種寫法 // 記住我 passport remember-me:php
+            
             if (JSON && JSON.stringify && JSON.parse) var Session = Session || (function() {
 
                     // window object
@@ -227,12 +216,12 @@
                         <!--<div class="fie">-->
                             <h1 class="lgd">登入帳號</h1>
                             <p>直接輸入您的 Blog 會員帳號密碼登入</p>
-            <!--1-->        <input type="username" id="username" class="username_email" name="username" placeholder="您的電子郵件地址" required>
-            <!--2-->        <input type="password" id="password" class="password1" name="password" placeholder="您的密碼" required>
-            <!--3-->        <input type="button" value="登入" class="btn" id="submit" onclick="myFormCheck()"/>
-            <!--4-->        <div id="rmbr">
-            <!--4.1-->          <input type="checkbox" id="remberme" name="remberme" required>
-            <!--4.2-->          <label for="remberme" id="remberme0">記住我</label>
+                            <input type="username" id="username" class="username_email" name="username" placeholder="您的電子郵件地址" required>
+                            <input type="password" id="password" class="password1" name="password" placeholder="您的密碼" required>
+                            <input type="button" value="登入" class="btn" id="submit" onclick="myFormCheck()"/>
+                            <div id="rmbr">
+                                <input type="checkbox" id="remberme" name="remberme" required>
+                                <label for="remberme" id="remberme0">記住我</label>
                             </div>
                             <div id="sign">
                                 <a href="javascript:;" id="member_btn">忘記密碼?</a>
